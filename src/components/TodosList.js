@@ -7,7 +7,12 @@ class TodosList extends React.Component {
     return (
       <div>
         {this.props.todosprops.map(todo => (
-            <TodoItem key={todo.id} todo={todo} />
+            <TodoItem
+             key={todo.id} 
+             todo={todo} 
+             handleChangePropsList={this.props.handleChangePropsContainer}
+             deleteTodoPropsList={this.props.deleteTodoPropsContainer}    
+             />
         ))}
         {/*Whenever you map through something, a list is created.
         React want each child in the list to have a unique key(id) prop. 
