@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './App.css';
 import * as serviceWorker from './serviceWorker';
 import TodoContainer from "./components/TodoContainer"
 
