@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/VishwanathDalawai/simple-todo-app/static/css/main.f66a9211.chunk.css",
-    "main.js": "/VishwanathDalawai/simple-todo-app/static/js/main.3df6a14f.chunk.js",
-    "main.js.map": "/VishwanathDalawai/simple-todo-app/static/js/main.3df6a14f.chunk.js.map",
-    "runtime-main.js": "/VishwanathDalawai/simple-todo-app/static/js/runtime-main.a441c96d.js",
-    "runtime-main.js.map": "/VishwanathDalawai/simple-todo-app/static/js/runtime-main.a441c96d.js.map",
-    "static/js/2.e9a03e88.chunk.js": "/VishwanathDalawai/simple-todo-app/static/js/2.e9a03e88.chunk.js",
-    "static/js/2.e9a03e88.chunk.js.map": "/VishwanathDalawai/simple-todo-app/static/js/2.e9a03e88.chunk.js.map",
-    "index.html": "/VishwanathDalawai/simple-todo-app/index.html",
-    "precache-manifest.6bee7ebc4867f7aff2d4852ece1957d3.js": "/VishwanathDalawai/simple-todo-app/precache-manifest.6bee7ebc4867f7aff2d4852ece1957d3.js",
-    "service-worker.js": "/VishwanathDalawai/simple-todo-app/service-worker.js",
-    "static/css/main.f66a9211.chunk.css.map": "/VishwanathDalawai/simple-todo-app/static/css/main.f66a9211.chunk.css.map",
-    "static/js/2.e9a03e88.chunk.js.LICENSE.txt": "/VishwanathDalawai/simple-todo-app/static/js/2.e9a03e88.chunk.js.LICENSE.txt"
+    "main.css": "/simple-todo-app/static/css/main.f66a9211.chunk.css",
+    "main.js": "/simple-todo-app/static/js/main.1450bfd8.chunk.js",
+    "main.js.map": "/simple-todo-app/static/js/main.1450bfd8.chunk.js.map",
+    "runtime-main.js": "/simple-todo-app/static/js/runtime-main.cba347df.js",
+    "runtime-main.js.map": "/simple-todo-app/static/js/runtime-main.cba347df.js.map",
+    "static/js/2.e9a03e88.chunk.js": "/simple-todo-app/static/js/2.e9a03e88.chunk.js",
+    "static/js/2.e9a03e88.chunk.js.map": "/simple-todo-app/static/js/2.e9a03e88.chunk.js.map",
+    "index.html": "/simple-todo-app/index.html",
+    "precache-manifest.21e3ebb75b7da42777b23cc605a92c1d.js": "/simple-todo-app/precache-manifest.21e3ebb75b7da42777b23cc605a92c1d.js",
+    "service-worker.js": "/simple-todo-app/service-worker.js",
+    "static/css/main.f66a9211.chunk.css.map": "/simple-todo-app/static/css/main.f66a9211.chunk.css.map",
+    "static/js/2.e9a03e88.chunk.js.LICENSE.txt": "/simple-todo-app/static/js/2.e9a03e88.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a441c96d.js",
+    "static/js/runtime-main.cba347df.js",
     "static/js/2.e9a03e88.chunk.js",
     "static/css/main.f66a9211.chunk.css",
-    "static/js/main.3df6a14f.chunk.js"
+    "static/js/main.1450bfd8.chunk.js"
   ]
 }
