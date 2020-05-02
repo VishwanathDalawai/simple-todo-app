@@ -1,6 +1,8 @@
 import React from "react";
 
 import TodosList from "./TodosList";
+import Header from "./Header";
+
 
 class TodoContainer extends React.Component {
   //Parent Component
@@ -37,6 +39,7 @@ class TodoContainer extends React.Component {
   render() {
     return (
       <div>
+      <Header />
       <TodosList todosprops={this.state.todos} /> {/* todosprops is props passed to TodosList component*/}
       </div>
     )
