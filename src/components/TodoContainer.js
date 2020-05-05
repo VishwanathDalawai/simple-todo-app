@@ -1,5 +1,6 @@
 import React from "react";
-import { v4 as uuidv4 } from "uuid";
+//import { v4 as uuidv4 } from "uuid";
+import axios from "axios";
 
 import TodosList from "./TodosList";
 import Header from "./Header";
@@ -8,35 +9,19 @@ import InputTodo from "./InputTodo"
 class TodoContainer extends React.Component {
   //Parent Component
   state = {
-    todos: [
-      {
-        id: uuidv4(),
-        title: "Setup development environment",
-        completed: true
-      },
-      {
-        id: uuidv4(),
-        title: "Develop website and add content",
-        completed: false
-      },
-      {
-        id: uuidv4(),
-        title: "Deploy to live server",
-        completed: false
-      },
-      {
-        id: uuidv4(),
-        title: "Share it with your friends and email vishwanathdalawai111@gmail.com that you followed this github!",
-        completed: false
-      },
-      {
-        id: uuidv4(),
-        title: "Be Happy, Be safe",
-        completed: false
-      }
-    ]
-   };
+    todos: [],
+    show: false  //just a variable for header component to see componentDidUpdate() method 
+  }
   
+  componentDidMount() {
+    axios.get("https://jsonplaceholder.typicode.com/todos", {
+      params: {
+        _limit: 5
+      }
+    }) 
+      .then(response => this.setState({ todos: response.data }));
+  }
+
    handleChangeVishwa = (id) => {
      this.setState({
        todos: this.state.todos.map(todoi => {
@@ -44,7 +29,8 @@ class TodoContainer extends React.Component {
            todoi.completed = !todoi.completed;
          }
          return todoi;
-       })
+       }),
+       show: !this.state.show
      });
   };
   /**
@@ -52,32 +38,38 @@ class TodoContainer extends React.Component {
    * ... is like static function. It allows us to grab only current items
    */
   delTodoVishwa = id => {
-    this.setState({
-      todos: [
-        ...this.state.todos.filter(todo => {
-          return todo.id !== id;
-        })
-      ]
-    }); //filter method returns new array by applying condition 
+    axios
+    .delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+    .then(reponse =>
+      this.setState({
+        todos: [
+          ...this.state.todos.filter(todo => {
+            return todo.id !== id
+          }),
+        ],
+      })
+    ) //filter method returns new array by applying condition 
   };
   /**
    * adds a item to state
    */
   addTodoItem = title => {
-    const newTodo = {
-      id: uuidv4(),
-      title: title,
-      completed: false
-    };
-    this.setState({
-      todos: [...this.state.todos, newTodo]
-    });
-  };
+    axios
+      .post("https://jsonplaceholder.typicode.com/todos", {
+        title: title,
+        completed: false,
+      })
+      .then(response =>
+        this.setState({
+          todos: [...this.state.todos, response.data],
+        })
+      )
+  }
 
   render() {
     return (
       <div className="container">
-        <Header />
+        <Header headerSpan={this.state.show} />
         <InputTodo addTodoProps={this.addTodoItem}/>
         <TodosList 
         todosprops={this.state.todos} 

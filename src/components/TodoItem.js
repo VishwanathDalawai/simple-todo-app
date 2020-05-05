@@ -4,6 +4,10 @@ import { FaTrash } from 'react-icons/fa';
 class TodoItem extends React.Component {
     //child component of TodosList
 
+    componentWillUnmount() {
+        alert("Item about to be deleted!");
+    }
+
   render() {
       
     const completedStyle = {
